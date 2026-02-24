@@ -1,0 +1,27 @@
+# Environment variables (API Keys - IMPORTANT)
+client/.env
+server/.env
+
+# Node dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build outputs (Vercel creates on build)
+.next/
+client/.next/
+
+# Vector Database
+qdrant_storage/
+
+# Uploaded files
+server/uploads/
+
+# Test/debug files
+server/text.tx
+
+# TypeScript generated
+client/next-env.d.ts
+
+# Clerk data (local session)
+client/.clerk/
