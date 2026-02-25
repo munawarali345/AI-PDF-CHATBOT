@@ -73,11 +73,11 @@ try {
   if(!exists) {
 
        vectorStore = await QdrantVectorStore.fromDocuments( texts, embeddings, {
-       url: "http://localhost:6333",
-      collectionName: "pdf-docs",
-  });
-  
-   // ni to wai rahe ga jo start me bana tha
+        url: "http://localhost:6333",
+       collectionName: "pdf-docs",
+   });
+   
+    // ni to wai rahe ga jo start me bana tha
   } else {
 
         console.log(" Existing collection → adding docs");
@@ -124,5 +124,3 @@ try {
 
 // ab hame na subse pehle pdf se document bana he sai he to 
 //  hame is pdf ko chunk karna he
-
-

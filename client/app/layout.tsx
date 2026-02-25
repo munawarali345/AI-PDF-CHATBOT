@@ -28,15 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* conditional redenring of clerk */}
-        {/* agar user sigend out he to signIn button shor karo */}
-      
-      <section className="min-h-screen flex items-center justify-center">
-        <SignedOut >
-          <SignUp />
-        </SignedOut>
-        </section>
-        {/* or agar user Sigend In he to hamre childeren ko render krdo */}
+        {/* agar user Sigend In he to hamre childeren ko render krdo */}
         <SignedIn>
           <header className="fixed top-0 right-0 p-4 z-50">
             <UserButton />
