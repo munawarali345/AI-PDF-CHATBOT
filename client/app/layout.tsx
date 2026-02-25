@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ClerkProvider, SignedOut, SignedIn, SignUp, UserButton } from '@clerk/nextjs'
+import { ClerkProvider, SignedOut, SignedIn, SignIn, SignUp, UserButton } from '@clerk/nextjs'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,11 +28,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* conditional redenring of clerk */}
-        {/* agar user sigend out he to signIn button shor karo */}
-        <SignedOut>
-          <SignUp />
-        </SignedOut>
+        {/* agar user sigend out he to SignIn/SignUp dikhao */}
+        <div className="flex items-center justify-center min-h-screen">
+          <SignedOut>
+            <SignIn />
+          </SignedOut>
+        </div>
         {/* or agar user Sigend In he to hamre childeren ko render krdo */}
         <SignedIn>
           <header className="fixed top-0 right-0 p-4 z-50">
