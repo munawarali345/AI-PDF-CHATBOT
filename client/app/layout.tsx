@@ -28,7 +28,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* agar user Sigend In he to hamre childeren ko render krdo */}
+        {/* conditional redenring of clerk */}
+        {/* agar user sigend out he to signIn button shor karo */}
+        <SignedOut>
+          <SignUp />
+        </SignedOut>
+        {/* or agar user Sigend In he to hamre childeren ko render krdo */}
         <SignedIn>
           <header className="fixed top-0 right-0 p-4 z-50">
             <UserButton />
