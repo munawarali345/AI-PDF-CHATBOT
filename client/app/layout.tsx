@@ -27,21 +27,22 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* agar user sigend out he to SignIn/SignUp dikhao */}
-        <div className="flex items-center justify-center min-h-screen">
-          <SignedOut>
-            <SignIn />
-          </SignedOut>
-        </div>
-        {/* or agar user Sigend In he to hamre childeren ko render krdo */}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased m-0 p-0`}>
+        {/* agar user sigend out he to signIn button show karo */}
+        <SignedOut>
+          <div className="flex items-center justify-center min-h-screen w-full">
+            <SignIn 
+              signUpUrl="https://eminent-humpback-82.accounts.dev/sign-up"
+            />
+          </div>
+        </SignedOut>
+        {/* agar user Sigend In he to hamre childeren ko render krdo */}
         <SignedIn>
           <header className="fixed top-0 right-0 p-4 z-50">
             <UserButton />
           </header>
           {children}
         </SignedIn>
-        
       </body>
     </html>
     </ClerkProvider>
